@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Email_Sender.iml" filepath="$PROJECT_DIR$/.idea/Email_Sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Summer internship/.idea/Summer internship.iml" filepath="$PROJECT_DIR$/../../Summer internship/.idea/Summer internship.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/pythonProject30/.idea/pythonProject30.iml" filepath="$USER_HOME$/PycharmProjects/pythonProject30/.idea/pythonProject30.iml" />
+    </modules>
+  </component>
+</project>

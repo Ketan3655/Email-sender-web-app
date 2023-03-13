@@ -1,0 +1,129 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Email Sender Web app </title>
+    <style type="text/css">
+        .header
+        {
+        height: 100px;
+        background:linear-gradient(45deg ,#ef0ac9,#00f7ff );
+        border: 1px solid black;
+        }
+
+        h1
+        {
+        color:white;
+        font-family:cursive;
+        }
+
+        .footer
+        {
+        height:100px;
+        background:linear-gradient(45deg ,#00f7ff,#ef0ac9);
+        border: 1px solid black;
+
+        }
+
+        .content
+        {
+        height: 520px;
+        border:1px solid black;
+        font-family:cursive;
+        }
+
+
+        input[type=text]
+        {
+        width:300px;
+        height:30px;
+        border-radius:10px;
+        font-size:1.5em;
+        font-family:cursive;
+        }
+
+
+
+
+        textarea
+        {
+        width:300px;
+        height:100px;
+        border-radius:10px;
+        font-size:1.5em;
+        font-family:cursive;
+        }
+
+        input[type=submit]
+        {
+        font-size:1em;
+        width:90px;
+        height:35px;
+        border-radius:30px;
+        color:white;
+        background:linear-gradient(45deg ,#00f7ff,#ef0ac9);
+        font-family:cursive;
+        }
+
+        input:hover
+        {
+        cursor:pointer;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1 align="center">Email sender Web App </h1>
+
+</div>
+
+<div class="content">
+    <br/><br/><br/>
+    <form method="post" action="/User/email_info/">
+        {% csrf_token %}
+        <table align="center"  cellspacing="0" cellpadding="10">
+            <tr>
+                <td>To:</td>
+                <td><input type="text" name="to" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td><input type="text" name="subject" maxlength="50" ></td>
+
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td>
+                <textarea name="message">
+
+                </textarea>
+                </td>
+            </tr>
+        <tr>
+
+            <td colspan="2" align="center"><input type="Submit" name="submit" value="submit"></td>
+
+        </tr>
+        </table>
+    </form>
+    {% if messages %}
+        <ul class="messages" align="center">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+             {% endfor %}
+        </ul>
+    {% endif %}
+
+
+</div>
+
+<div class="footer">
+    <h1 align="center">@Copyright</h1>
+
+</div>
+
+</body>
+</html>
